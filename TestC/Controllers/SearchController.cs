@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -25,7 +26,7 @@ namespace TestC.Controllers
         // GET api/<controller>/5
         public IHttpActionResult Get([FromUri]ParametersModel model)
         {
-            return Ok(_propService.Search(model));
+            return Ok(JsonConvert.SerializeObject(_propService.Search(model)));
         }
 
         //// POST api/<controller>

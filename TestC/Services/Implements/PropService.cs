@@ -24,11 +24,6 @@ namespace TestC.Services.Implements
 
             if (decimal.TryParse(onlyNumber, out decimal convertVal))
             {
-                if (convertVal < val)
-                {
-                    return false;
-                }
-
                 return convertVal >= val;
             }
             else
