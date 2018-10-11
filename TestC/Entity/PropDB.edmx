@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TEST_C_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="properties">
+          <Key>
+            <PropertyRef Name="uniq_id" />
+          </Key>
+          <Property Name="additional_info" Type="varchar" MaxLength="422" Nullable="false" />
+          <Property Name="amenities" Type="varchar" MaxLength="149" />
+          <Property Name="check_in_date" Type="date" Nullable="false" />
+          <Property Name="check_out_date" Type="date" Nullable="false" />
+          <Property Name="city" Type="varchar" MaxLength="28" Nullable="false" />
+          <Property Name="country" Type="varchar" MaxLength="5" />
+          <Property Name="crawl_date" Type="date" />
+          <Property Name="description" Type="varchar" MaxLength="4131" />
+          <Property Name="highlight_value" Type="varchar" MaxLength="1024" />
+          <Property Name="hotel_star_rating" Type="int" />
+          <Property Name="image_count" Type="int" />
+          <Property Name="image_urls" Type="varchar" MaxLength="7190" />
+          <Property Name="internet" Type="varchar" MaxLength="20" />
+          <Property Name="landmark" Type="varchar" MaxLength="134" />
+          <Property Name="latitude" Type="numeric" Precision="30" Scale="7" Nullable="false" />
+          <Property Name="longitude" Type="numeric" Precision="30" Scale="7" Nullable="false" />
+          <Property Name="occupancy" Type="varchar" MaxLength="16" />
+          <Property Name="pageurl" Type="varchar" MaxLength="155" Nullable="false" />
+          <Property Name="property_address" Type="varchar" MaxLength="83" Nullable="false" />
+          <Property Name="property_id" Type="int" Nullable="false" />
+          <Property Name="property_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="property_type" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="qts" Type="varchar" MaxLength="25" />
+          <Property Name="query_time_stamp" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="room_price" Type="varchar" MaxLength="25" />
+          <Property Name="room_types" Type="varchar" MaxLength="407" Nullable="false" />
+          <Property Name="search_term" Type="varchar" MaxLength="16" />
+          <Property Name="service_value" Type="varchar" MaxLength="81" />
+          <Property Name="similar_hotel" Type="varchar" MaxLength="121" />
+          <Property Name="sitename" Type="varchar" MaxLength="17" Nullable="false" />
+          <Property Name="things_to_do" Type="varchar" MaxLength="46" />
+          <Property Name="things_to_note" Type="varchar" MaxLength="1017" />
+          <Property Name="uniq_id" Type="varchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="TEST_C_DBModelStoreContainer">
+          <EntitySet Name="properties" EntityType="Self.properties" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TEST_C_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="property">
+          <Key>
+            <PropertyRef Name="uniq_id" />
+          </Key>
+          <Property Name="additional_info" Type="String" MaxLength="422" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amenities" Type="String" MaxLength="149" FixedLength="false" Unicode="false" />
+          <Property Name="check_in_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="check_out_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="city" Type="String" MaxLength="28" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="crawl_date" Type="DateTime" Precision="0" />
+          <Property Name="description" Type="String" MaxLength="4131" FixedLength="false" Unicode="false" />
+          <Property Name="highlight_value" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="hotel_star_rating" Type="Int32" />
+          <Property Name="image_count" Type="Int32" />
+          <Property Name="image_urls" Type="String" MaxLength="7190" FixedLength="false" Unicode="false" />
+          <Property Name="internet" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="landmark" Type="String" MaxLength="134" FixedLength="false" Unicode="false" />
+          <Property Name="latitude" Type="Decimal" Precision="30" Scale="7" Nullable="false" />
+          <Property Name="longitude" Type="Decimal" Precision="30" Scale="7" Nullable="false" />
+          <Property Name="occupancy" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="pageurl" Type="String" MaxLength="155" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="property_address" Type="String" MaxLength="83" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="property_id" Type="Int32" Nullable="false" />
+          <Property Name="property_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="property_type" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="qts" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="query_time_stamp" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="room_price" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="room_types" Type="String" MaxLength="407" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="search_term" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="service_value" Type="String" MaxLength="81" FixedLength="false" Unicode="false" />
+          <Property Name="similar_hotel" Type="String" MaxLength="121" FixedLength="false" Unicode="false" />
+          <Property Name="sitename" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="things_to_do" Type="String" MaxLength="46" FixedLength="false" Unicode="false" />
+          <Property Name="things_to_note" Type="String" MaxLength="1017" FixedLength="false" Unicode="false" />
+          <Property Name="uniq_id" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="TEST_C_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="properties" EntityType="Self.property" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TEST_C_DBModelStoreContainer" CdmEntityContainer="TEST_C_DBEntities">
+          <EntitySetMapping Name="properties">
+            <EntityTypeMapping TypeName="TEST_C_DBModel.property">
+              <MappingFragment StoreEntitySet="properties">
+                <ScalarProperty Name="additional_info" ColumnName="additional_info" />
+                <ScalarProperty Name="amenities" ColumnName="amenities" />
+                <ScalarProperty Name="check_in_date" ColumnName="check_in_date" />
+                <ScalarProperty Name="check_out_date" ColumnName="check_out_date" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="crawl_date" ColumnName="crawl_date" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="highlight_value" ColumnName="highlight_value" />
+                <ScalarProperty Name="hotel_star_rating" ColumnName="hotel_star_rating" />
+                <ScalarProperty Name="image_count" ColumnName="image_count" />
+                <ScalarProperty Name="image_urls" ColumnName="image_urls" />
+                <ScalarProperty Name="internet" ColumnName="internet" />
+                <ScalarProperty Name="landmark" ColumnName="landmark" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="occupancy" ColumnName="occupancy" />
+                <ScalarProperty Name="pageurl" ColumnName="pageurl" />
+                <ScalarProperty Name="property_address" ColumnName="property_address" />
+                <ScalarProperty Name="property_id" ColumnName="property_id" />
+                <ScalarProperty Name="property_name" ColumnName="property_name" />
+                <ScalarProperty Name="property_type" ColumnName="property_type" />
+                <ScalarProperty Name="qts" ColumnName="qts" />
+                <ScalarProperty Name="query_time_stamp" ColumnName="query_time_stamp" />
+                <ScalarProperty Name="room_price" ColumnName="room_price" />
+                <ScalarProperty Name="room_types" ColumnName="room_types" />
+                <ScalarProperty Name="search_term" ColumnName="search_term" />
+                <ScalarProperty Name="service_value" ColumnName="service_value" />
+                <ScalarProperty Name="similar_hotel" ColumnName="similar_hotel" />
+                <ScalarProperty Name="sitename" ColumnName="sitename" />
+                <ScalarProperty Name="things_to_do" ColumnName="things_to_do" />
+                <ScalarProperty Name="things_to_note" ColumnName="things_to_note" />
+                <ScalarProperty Name="uniq_id" ColumnName="uniq_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
