@@ -11,8 +11,8 @@ namespace TestC.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
-            return View();
+            var url = HttpContext.Request.Url + "swagger/ui/index";
+            return Redirect(url);
         }
     }
 }
